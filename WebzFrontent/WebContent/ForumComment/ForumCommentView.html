@@ -1,0 +1,30 @@
+<!-- all-user-view -->
+
+<div>
+	<div class="container">
+	<div>
+	
+	<div class="col-md-4" ng-repeat="forumComment in ctrl.forumComments">
+	<div>
+	<div>
+	<h3>{{forumComment.forumComment}}</h3>
+	
+	<div>
+	
+	
+<input type="button" class="btn btn-warning floatright"
+	ng-click="ctrl.getSelectedForumComment(forumComment.forumCommentId)" 
+      value="Know More..">
+      
+
+	</div>
+	</div>
+	<div>
+	<h4><a><span><i class="fa fa-rss" aria-hidden="true"></i></span>{{forumComment.forumComment}}</a></h4>
+<ul style="text-align: center;">
+
+		</ul>
+		</div>
+		</div>
+		</div>
+		</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Add Blog </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Add Blog</div>
+                            <div class="card-body">
+
+                                <form class="form-horizontal" method="post" action="#">
+
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">BlogTitle</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
+                                                <input type="Name" placeholder="Enter blogTitle" ng-model="ctrl.blog.blogTitle"  required/>
+                                            </div>
+                                        </div>
+                                    </div>
+									 <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">BlogContent</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
+                                                <input type="text" placeholder="Enter blogContent" ng-model="ctrl.blog.blogContent" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group ">
+                                        <button ng-click="ctrl.createBlog(ctrl.blog)" type="button" class="btn btn-primary btn-lg btn-block login-button">AddBlog</button>
+                                    </div>
+                                    <div class="login-register">
+                                        
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

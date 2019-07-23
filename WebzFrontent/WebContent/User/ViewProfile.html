@@ -1,0 +1,82 @@
+ <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<div ng-app="myApp">
+
+<div class="container">
+ <a class="btn btn-danger floatleft" href="#!index">HOME</a><p>
+	<div class="row row-profile">
+		<div class="col-md-8 col-md-offset-2 profile-base">
+			<fieldset>
+				<legend>
+					<span>User Profile</span>
+					<!-- <a href="#/edit-profile" class="btn btn-info btn-edit">
+						<span>Edit Profile</span> 
+					</a> -->
+				</legend>
+				<div>
+					<form class="col-md-8 form-profile">
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">User ID</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{selectedUser.userId}}</label>
+							</div>
+						</div>
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">User Name</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{selectedUser.name}}</label>
+							</div>
+						</div>
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">Gender</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{selectedUser.gender}}</label>
+							</div>
+						</div> 
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">Email Id</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{selectedUser.email}}</label>
+							</div>
+						</div>
+						
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">Role in this project</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{selectedUser.role}}</label>
+								<br><br>
+								
+								 <div class="one-profile">
+							<div class="col-md-4">
+								 <input type="button" class="btn btn-primary"  ng-show="currentUser.role == 'USER'" ng-click="ctrl.sendFriendRequest(selectedUser.userId)" value="ADD FRIEND">
+							 
+							
+							</div>
+					
+					
+					     
+					
+					
+						 
+					</form>
+					<div class="col-md-4">
+						<!-- <img
+							src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
+							class="profile-img"> -->
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+</div>
+</div>

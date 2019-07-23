@@ -1,0 +1,38 @@
+<!-- all-user-view -->
+
+<div>
+	<div class="container">
+	<div>
+	
+	<div class="col-md-4" ng-repeat="forum in ctrl.forums">
+	<div>
+	<div>
+	<h3><a><span><i class="fa fa-rss" aria-hidden="true"></i></span>{{forum.forumName}}</a></h3>
+	<p>{{forum.forumDescription}}</p>
+	<div>
+	
+	
+<input type="button" class="btn btn-warning floatright"
+	ng-click="ctrl.getSelectedForum(forum.forumId)" 
+      value="More Details">
+      
+
+	</div>
+	</div>
+	<div>
+	
+<ul style="text-align: "right">
+
+<div class="card" align="right">
+      <h6>{{forum.forumStatus}}</h6>
+      <button ng-show=" currentUser.role == 'ADMIN' && (forum.forumStatus == 'Pending' ||forum.forumStatus == 'Reject')" ng-click="ctrl.approveForum(Forum,forum.forumId)">Approve</button>
+	  <button ng-show=" currentUser.role == 'ADMIN' && (forum.forumStatus == 'Pending' || forum.forumStatus == 'Approved')" ng-click="ctrl.rejectForum(Forum,forum.forumId)">Reject</button>
+    </div>
+
+
+
+		</ul>
+		</div>
+		</div>
+		</div>
+		</div>

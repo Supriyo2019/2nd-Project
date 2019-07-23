@@ -1,0 +1,87 @@
+ <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<div ng-app="myApp">
+
+<div class="container">
+	<div class="row row-profile">
+		<div class="col-md-8 col-md-offset-2 profile-base">
+			<fieldset>
+				<legend>
+					<span>ForumComment Profile</span>
+					<!-- <a href="#/edit-profile" class="btn btn-info btn-edit">
+						<span>Edit Profile</span> 
+					</a> -->
+				</legend>
+				<div>
+					<form class="col-md-8 form-profile">
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">ForumCommentId </a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{forumComment.forumCommentId}}</label>
+							</div>
+						</div>
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">ForumId</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{forumComment.forumId}}</label>
+							</div>
+						</div>
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">ForumComment</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{forumComment.forumComment}}</label>
+							</div>
+						</div>
+						
+						</div> 
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">ForumCommentDate</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{forumComment.forumCommentDate | date}}</label>
+							</div>
+						</div>
+						<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">UserId</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{forumComment.userId}}</label>
+							</div>
+						</div>
+						
+					<div class="one-profile">
+							<div class="col-md-4">
+								<a class="floatleft">UserName</a>
+							</div>
+							<div class="col-md-8">
+								<label class="floatleft"> : {{forumComment.userName}}</label>
+							</div>
+						</div>
+							
+								
+								 <div class="one-profile">
+							
+					 <a href="#!EditForumComment">Edit</a><p>
+						
+					</form>
+					<div class="col-md-4">
+						<!-- <img
+							src="https://x1.xingassets.com/assets/frontend_minified/img/blogs/nobody_m.original.jpg"
+							class="profile-img"> -->
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+</div>
+</div>

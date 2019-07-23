@@ -1,0 +1,153 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.dropbtn {
+  background-color:  #141414;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e2e590;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color:#000000;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #8BBB8D;}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+.body {
+  font-family: Arial;
+  padding: 20px;
+  background: white;
+  background-image: url("resources/images/.jpg");
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+
+
+/* Fake image */
+.fakeimg {
+  background-color: #000000;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+
+<div class="body">
+
+<div class="header">
+  <h2>Forum Details</h2>
+  <h4>{{forum.forumName}}</h4>
+  <h6>By {{forum.userName}} on {{forum.forumCreationDate | date}}</h6>
+ 
+  
+  <p>{{forum.forumDescription}}</p>
+  <h6><button><a class="btn btn-info" href="#!EditForum"  ng-show="forum.userId == currentUser.userId  ">Edit Forum</a></button></h6>
+  
+	
+	</div>
+	
+	
+
+<div class="row">
+  <div class="leftcolumn" >
+  <h1>ForumComments</h1>
+    <div class="card" ng-repeat="forumComment in forumComments">
+      <h5>By {{forumComment.userName}} on {{forumComment.forumCommentDate | date}}</h5>
+	<p>{{forumComment.forumComment}}</p>
+      
+    </div>
+    
+    </div>
+
+
+	
+<div class="row" ng-show="currentUser.role == 'USER'">
+
+               <h3 align="center" font color="black">Leave a Comment</font></h3>
+
+               <!-- form -->
+               <form>
+				
+
+                  <div>
+                     <label  for="cMessage">Comment<span class="required"></span></label>
+                     <textarea name="cMessage"  id="cMessage" rows="15" cols="50" ng-model="forumComment.forumComment" required></textarea>
+                      
+                  </div>
+				  <div>
+				  </div>
+
+                  <button ng-click="ctrl.createForumComment(forumComment)" class="registerbtn">Submit</button>
+
+					
+				   </form> <!-- Form End -->
+
+            </div>
+    

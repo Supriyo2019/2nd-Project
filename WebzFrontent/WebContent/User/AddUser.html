@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Registration - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body background="resources/images/blog2.jpg">
+<div class="container">
+<div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Register</div>
+                            <div class="card-body">
+
+                                <form class="form-horizontal" method="post" action="#">
+
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" placeholder="Enter  Full Name" ng-model="ctrl.user.name" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" placeholder="Enter Email" ng-model="ctrl.user.email" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                <input type="text" placeholder="Enter User ID" ng-model="ctrl.user.userId" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="password" placeholder="Enter Password" ng-model="ctrl.user.password" required />
+                                            </div>
+                                        </div>
+                                    </div>
+									&nbsp;&nbsp;
+                        <label for="gender"><b>Gender</b></label>
+                        <select ng-model="ctrl.user.gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        </select>
+						 &nbsp;&nbsp;
+                                    <div class="form-group">
+                                        <label for="confirm" class="cols-sm-2 control-label">Date Of Birth</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="date" placeholder="Enter DOB(DD/MM/YYYY)" ng-model="ctrl.user.dob"  required />
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="confirm" class="cols-sm-2 control-label">Description</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="text" placeholder="Enter Description" ng-model="ctrl.user.description" required />
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="confirm" class="cols-sm-2 control-label">Address</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="text" placeholder="Address" ng-model="ctrl.user.address" required />
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="confirm" class="cols-sm-2 control-label">Contact No</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="text" placeholder="contactNo" ng-model="ctrl.user.contactNo" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <button   ng-click="ctrl.createUser(ctrl.user)" type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                                    </div>
+                                    <div class="login-register">
+                                        <a href="index.php">Login</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- all-user-view -->
+
+<div>
+	<div class="container">
+	<div>
+	
+	<div class="col-md-4" ng-repeat="forum in ctrl.approvedForums">
+	<div>
+	<div>
+	
+	
+	</div>
+	<div>
+	<h4><a><span><i class="fa fa-rss" aria-hidden="true"></i></span>{{forum.forumName}}</a></h4>
+	<p>{{forum.forumDescription}}</p>
+	 <h5>By {{forum.userId}} on {{forum.forumCreationDate | date}}</h5>
+      
+      
+     
+<ul style="text-align: center;">
+<input type="button" class="btn btn-warning floatright"
+	ng-click="ctrl.getSelectedForum(forum.forumId)" 
+      value="More Details"/>
+<div class="card" align="right">
+ 
+      
+     <!--   <button ng-show=" currentUser.role == 'ADMIN' && (forum.forumStatus == 'Pending' ||forum.forumStatus == 'Reject')" ng-click="ctrl.approveForum(Forum,forum.forumId)">Approve</button>
+	  <button ng-show=" currentUser.role == 'ADMIN' && (forum.forumStatus == 'Pending' || forum.forumStatus == 'Approved')" ng-click="ctrl.rejectForum(Forum,forum.forumId)">Reject</button>
+    </div>-->
+
+
+
+		</ul>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		<a href="#!AddForum" >
+    <input type="button" value="CREATE NEW FORUM"  class="btn btn-info">
+    </a>
+		</div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Clean Registration form - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        form * {
+    border-radius:0 !important;
+}
+
+form > fieldset > legend {
+    font-size:120%;
+}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">
+                <form role="form" method="POST" action="#">
+
+                    <legend class="text-center">AddBlogComment</legend>
+
+                    <fieldset>
+                        <legend>Enter Account Details</legend>
+
+                       
+
+                        <div class="form-group col-md-6">
+                            <label for="text">BlogComment</label>
+                            <input type="text" placeholder="Enter User ID" ng-model="ctrl.blogComment.blogComment" required>
+                        </div>
+
+                        
+						
+
+                       
+						
+
+                    </fieldset>
+
+                  
+
+                   
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button ng-click="ctrl.createBlogComment(ctrl.blogComment)" class="registerbtn">AddBlog</button>
+                           
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#found_site').on('change', function() {
+       $(this).val() == "other" ? $('#specify').closest('.form-group').show() : $('#specify').closest('.form-group').hide();
+    })
+})
+</script>
+</body>
+</html>

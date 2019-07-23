@@ -1,0 +1,33 @@
+<!-- all-user-view -->
+
+<div>
+	<div class="container">
+	<div>
+	
+	<div class="col-md-4" ng-repeat="blogComment in ctrl.blogComments">
+	<div>
+	<div>
+	<h3>{{blogComment.blogComment}}</h3>
+	<h3>{{blogComment.userId}}</h3>
+	<h3>{{blogComment.blogCommentDate | date}}</h3>
+	<h3>{{blogComment.userName}}</h3>
+	
+	<div>
+	
+	
+<input type="button" class="btn btn-warning floatright"
+	ng-click="ctrl.getSelectedBlogComment(blogComment.blogCommentId)" 
+      value="Know More..">
+      
+
+	</div>
+	</div>
+	<div>
+	<h4><a><span><i class="fa fa-rss" aria-hidden="true"></i></span>{{blogComment.blogComment}}</a></h4>
+<ul style="text-align: center;">
+
+		</ul>
+		</div>
+		</div>
+		</div>
+		</div>

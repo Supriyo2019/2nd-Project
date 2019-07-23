@@ -1,0 +1,44 @@
+<!-- all-user-view -->
+
+<div>
+	<div class="container">
+	<div>
+	
+	<div class="col-md-4" ng-repeat="blog in ctrl.approvedBlogs">
+	<div>
+	<!--  <div>
+	<h3>{{blog.blogTitle}}</h3>
+	<p>{{blog.blogContent}}</p>
+	<div>
+	
+	
+
+      
+
+	</div>
+	</div>-->
+	<div>
+	<h4><a><span><i class="fa fa-rss" aria-hidden="true"></i></span>{{blog.blogTitle}}</a></h4>
+	<p>{{blog.blogContent}}</p>
+	 <h5>By {{blog.userId}} on {{blog.blogDate | date}}</h5>
+	 <input type="button" class="btn btn-warning floatright"
+	ng-click="ctrl.getSelectedBlog(blog.blogId)" 
+      value="More Details">
+ 
+<div class="card" align="right">
+      
+    <!--  <button ng-show=" currentUser.role == 'ADMIN' && (blog.blogStatus == 'Pending' || blog.blogStatus == 'Reject')" ng-click="ctrl.approveBlog(Blog,blog.blogId)">Approve</button>
+	  <button ng-show=" currentUser.role == 'ADMIN' && (blog.blogStatus == 'Pending' || blog.blogStatus == 'Approved')" ng-click="ctrl.rejectBlog(Blog,blog.blogId)">Reject</button>
+    </div>-->  
+		</ul>
+		
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		<a href="#!AddBlog" >
+    <input type="button" value="CREATE NEW Blog"  class="btn btn-info">
+    </a>
+		</div>

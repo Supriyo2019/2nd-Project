@@ -1,0 +1,57 @@
+<style>
+
+caption{
+color: black;
+position: center
+
+}
+table,td {
+  border: 0px solid turquoise;
+  background-color: #b3ccff;
+  position: center;
+  padding: 4px;
+  color: black;
+  width: 100%
+}
+th, td {
+  padding: 25px;
+}
+
+
+</style>
+
+<div>
+<table align="center">
+
+<tr>
+<td colspan="3" align="center"></td>
+</tr>
+
+
+<tr>
+<td>COMPANY NAME-<td><td>{{selectedJob.companyName}}</td>
+</tr>
+<tr>
+<td>LOCATION-<td><td>{{selectedJob.location}}</td>
+</tr>
+<tr>
+<td>JOB DESCRIPTION-<td><td>{{selectedJob.description}}</td>
+</tr>
+<tr>
+<td>POSTED ON -<td><td>{{selectedJob.jobDate | date }}</td>
+</tr>
+<tr>
+<td>STATUS-<td><td>{{selectedJob.status}}</td>
+</tr>
+
+
+<a href="#" ng-click="m.applyForJob(selectedJob,selectedJob.jobId)" class="btn btn-primary" ng-show=" currentUser.role == 'USER'">Apply job</a> 
+              <a href="#" ng-show=" currentUser.userRole == 'ADMIN'" ng-click="m.fetchAllJobApplications(job.jobId)" class="btn btn-common">View Job Application </a>
+              <br>
+              <br>
+              
+   <a href="#!updateJob" class="btn btn-primary" ng-hide=" currentUser.role == 'USER'">Edit</a>           
+              
+
+</table>
+</div>

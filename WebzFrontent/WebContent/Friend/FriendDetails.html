@@ -1,0 +1,77 @@
+<style>
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+body{
+  background-image: url("resources/images/login.jpg");
+}
+caption{
+color: black;
+position: center
+
+}
+table,td {
+  border: 0px solid turquoise;
+  background-color: #8BBB8D
+;
+  position: center;
+  padding: 4px;
+  color: black;
+  width: 100%
+}
+th, td {
+  padding: 25px;
+}
+
+
+</style>
+
+
+<table align="center">
+
+<tr>
+<td colspan="3" align="center"></td>
+</tr>
+
+<tr>
+<td>USER ID -<td><td>{{friend.userId}}</td>
+</tr>
+<tr>
+<td>NAME-<td><td>{{friend.name}}</td>
+</tr>
+<tr>
+<td>GENDER-<td><td>{{user.gender}}</td>
+</tr>
+<tr>
+<td>DATE OF BIRTH-<td><td>{{user.dob | date}}</td>
+</tr>
+<tr>
+<td>E-MAIL-<td><td>{{user.email}}</td>
+</tr>
+<tr>
+<td>ADDRESS-<td><td>{{user.address}}</td>
+</tr>
+<tr>
+<td>CONTACT-<td><td>{{user.contactNo}}</td>
+</tr>
+<tr>
+<td>ONLINE STATUS-<td><td>{{user.isOnline}}</td>
+</tr>
+<button class="btn btn-success"  ng-click="ctrl.unFriend(friend,friend.userId)">UNFRIEND</button>
+
+
+
+</table>
+</div>
